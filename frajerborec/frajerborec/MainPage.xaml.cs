@@ -11,6 +11,7 @@ namespace frajerborec
 	{
 		public MainPage()
 		{
+			var a = 5;
 			InitializeComponent();
 		}
 	}
