@@ -13,7 +13,7 @@ namespace frajerborec
 		{
 			InitializeComponent();
 
-			MainPage = new frajerborec.MainPage();
+			MainPage = new frajerborec.MasterDetailPage1();
 		}
 
 		protected override void OnStart ()

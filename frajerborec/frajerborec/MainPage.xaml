@@ -2,10 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:frajerborec"
-             x:Class="frajerborec.MainPage">
+             x:Class="frajerborec.MainPage"
+			 Title="Dashboard">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
 
+	<ContentPage.Resources>
+		<StyleSheet Source="style.css"></StyleSheet>
+	</ContentPage.Resources>
+	<StackLayout>
+		<Button Text="button"></Button>
+			<FlexLayout StyleId="MainContainer">
+				<BoxView StyleClass="ABox" WidthRequest="100" HeightRequest="100" />
+				<Label Text="ahoj" />
+				<Label Text="jak" />
+				<Label Text="se" />
+				<Label Text="máš" />
+				<BoxView StyleClass="ABox" StyleId="EndBox" WidthRequest="100" HeightRequest="100" />
+			</FlexLayout>
+	</StackLayout>
 </ContentPage>

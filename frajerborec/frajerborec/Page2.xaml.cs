@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace frajerborec
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MainPage : ContentPage
+	public partial class Page2 : ContentPage
 	{
-		public MainPage()
+		public Page2 ()
 		{
-			InitializeComponent();
+			InitializeComponent ();
 
+			ToolbarItem toolbar = new ToolbarItem();
+			toolbar.Text = "bb";
+
+			ToolbarItems.Add(toolbar);
 			
 
-
-		}
-
-		private void jou(object sender, EventArgs e)
-		{
-			
 		}
 	}
 }

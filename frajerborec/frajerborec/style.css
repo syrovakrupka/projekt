@@ -1,0 +1,13 @@
+﻿flexlayout {
+	display: flex;
+}
+
+#MainContainer {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.ABox {
+	align-self: center;
+}
