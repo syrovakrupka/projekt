@@ -2,12 +2,18 @@
 	display: flex;
 }
 
-#MainContainer {
+#MainContainer, #bigboi {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-end;
+	padding: 10;
 }
 
 .ABox {
 	align-self: center;
+}
+
+.input_label {
+	color: Black;
+	text-align: center;
 }

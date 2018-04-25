@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="frajerborec.NewGoal">
+	<ContentPage.Resources>
+		<StyleSheet Source="style.css"></StyleSheet>
+		<ResourceDictionary>
+			<Style TargetType="Label" x:Key="inputlbl">
+				<Setter Property="TextColor" Value="Green" />
+			</Style>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+
+
+
+	<ContentPage.Content>
+		<StackLayout>
+			<FlexLayout StyleId="bigboi">
+				<Label StyleClass="input_label" Style="{StaticResource inputlbl}">Goal:</Label>
+				<Entry WidthRequest="200"></Entry>
+			</FlexLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

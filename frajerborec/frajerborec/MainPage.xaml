@@ -10,7 +10,7 @@
 		<StyleSheet Source="style.css"></StyleSheet>
 	</ContentPage.Resources>
 	<StackLayout>
-		<Button Text="button"></Button>
+		<Button Clicked="jou" Text="button"></Button>
 			<FlexLayout StyleId="MainContainer">
 				<BoxView StyleClass="ABox" WidthRequest="100" HeightRequest="100" />
 				<Label Text="ahoj" />
