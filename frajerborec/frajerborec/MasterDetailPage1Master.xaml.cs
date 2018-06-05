@@ -33,9 +33,10 @@ namespace frajerborec
             {
                 MenuItems = new ObservableCollection<MasterDetailPage1MenuItem>(new[]
                 {
-                    new MasterDetailPage1MenuItem { Id = 0, Title = "Dashboard", TargetType = typeof(MainPage)},
-                    new MasterDetailPage1MenuItem { Id = 1, Title = "Přehled", TargetType = typeof(Page2) },
-                });
+					new MasterDetailPage1MenuItem { Id = 0, Title = "Dashboard", TargetType = typeof(MainPage) },
+					//new MasterDetailPage1MenuItem { Id = 1, Title = "New Goal", TargetType = typeof(NewGoal) },
+					new MasterDetailPage1MenuItem { Id = 1, Title = "Goals List", TargetType = typeof(GoalsPage) },
+				});
             }
             
             #region INotifyPropertyChanged Implementation

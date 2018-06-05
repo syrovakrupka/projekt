@@ -2,11 +2,18 @@
 	display: flex;
 }
 
-#MainContainer, #bigboi {
+.bigboi {
+	margin-top: 30;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: flex-end;
-	padding: 10;
+	justify-content: space-around;
+}
+
+.separator {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 13;
 }
 
 .ABox {
@@ -14,6 +21,9 @@
 }
 
 .input_label {
-	color: Black;
 	text-align: center;
+}
+
+.kkt {
+	align-self: center;
 }

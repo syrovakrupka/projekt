@@ -22,7 +22,7 @@ namespace frajerborec
 
 		private void jou(object sender, EventArgs e)
 		{
-			Navigation.PushModalAsync(new NewGoal());
+			Navigation.PushAsync(new NewGoal());
 		}
 	}
 }

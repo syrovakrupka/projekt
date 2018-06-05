@@ -1,12 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="frajerborec.NewGoal">
+             x:Class="frajerborec.NewGoal"
+			 Title="New Goal">
 	<ContentPage.Resources>
 		<StyleSheet Source="style.css"></StyleSheet>
 		<ResourceDictionary>
 			<Style TargetType="Label" x:Key="inputlbl">
-				<Setter Property="TextColor" Value="Green" />
+				<!--<Setter Property="TextColor" Value="Green" />-->
+				<Setter Property="FontSize" Value="24" />
+			</Style>
+			<Style TargetType="Entry" x:Key="entry">
 			</Style>
 		</ResourceDictionary>
 	</ContentPage.Resources>
@@ -15,10 +19,21 @@
 
 	<ContentPage.Content>
 		<StackLayout>
-			<FlexLayout StyleId="bigboi">
-				<Label StyleClass="input_label" Style="{StaticResource inputlbl}">Goal:</Label>
-				<Entry WidthRequest="200"></Entry>
+			<FlexLayout StyleClass="bigboi">
+				<Label StyleClass="input_label" Margin="30, 0, 0, 0" Style="{StaticResource inputlbl}">Goal:</Label>
+				<Entry WidthRequest="190" Margin="0,0,30,0" Text="{Binding Goal.Name}"></Entry>
 			</FlexLayout>
-        </StackLayout>
+			<FlexLayout StyleClass="separator">
+				<BoxView Color="#cccccc" WidthRequest="300" StyleClass="ABox" HeightRequest="2"></BoxView>
+			</FlexLayout>
+			<FlexLayout StyleClass="bigboi" WidthRequest="300">
+				<Label StyleClass="input_label" Style="{StaticResource inputlbl}">Remind:</Label>
+				<Switch HeightRequest="40" StyleClass="kkt" Margin="-40, 0, -40, 0" IsToggled="{Binding Goal.Remind}"></Switch>
+				<Button Text="set" Clicked="set_clicked"></Button>
+			</FlexLayout>
+			<StackLayout VerticalOptions="End">
+				<Button Text="Save" Clicked="save"></Button>
+			</StackLayout>
+		</StackLayout>
     </ContentPage.Content>
 </ContentPage>
