@@ -42,7 +42,7 @@ namespace frajerborec
 		public NewGoal(ObservableCollection<Goal> goals) {
 
 			InitializeComponent();
-			Goal = new Goal() { Name = "", Days = new Days(), Remind = false, };
+			Goal = new Goal() { Name = "", Days = new Days() { Mon = true}, Remind = false, };
 			this.goals = goals;
 			BindingContext = this;
 		}
@@ -65,6 +65,18 @@ namespace frajerborec
 
 			var query = db.Query<Goal>("select * from Goal");
 			Navigation.PopAsync();
+		}
+
+
+		private void label_toggled(object sender, EventArgs e)
+		{
+			var label = sender as Label;
+			var q = label.Text;
+			if (label.TextColor == Color.Red)
+			{
+				label.TextColor = Color.Default;
+			}
+			else label.TextColor = Color.Red;
 		}
 	}
 }

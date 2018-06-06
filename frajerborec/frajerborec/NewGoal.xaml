@@ -27,10 +27,140 @@
 				<BoxView Color="#cccccc" WidthRequest="300" StyleClass="ABox" HeightRequest="2"></BoxView>
 			</FlexLayout>
 			<FlexLayout StyleClass="bigboi" WidthRequest="300">
-				<Label StyleClass="input_label" Style="{StaticResource inputlbl}">Remind:</Label>
+				<Label StyleClass="input_label" 
+					   Style="{StaticResource inputlbl}">Remind:</Label>
 				<Switch HeightRequest="40" StyleClass="kkt" Margin="-40, 0, -40, 0" IsToggled="{Binding Goal.Remind}"></Switch>
 				<Button Text="set" Clicked="set_clicked"></Button>
 			</FlexLayout>
+			<FlexLayout StyleClass="separator">
+				<BoxView Color="#cccccc" WidthRequest="300" StyleClass="ABox" HeightRequest="2"></BoxView>
+			</FlexLayout>
+			<StackLayout Margin="0, 30,0,20 " Orientation="Horizontal" HorizontalOptions="Center">
+				<Label StyleClass="input_label" Margin="0,0,10,0" Style="{StaticResource inputlbl}">Days:</Label>
+				<StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+					<Label Text="Mon" StyleClass="days_label" >
+						<Label.GestureRecognizers>
+							<TapGestureRecognizer Tapped="label_toggled"/>
+						</Label.GestureRecognizers>
+						<Label.Triggers>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Mon}"
+                     Value="false">
+								<Setter Property="TextColor" Value="Default" />
+							</DataTrigger>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Mon}"
+                     Value="true">
+								<Setter Property="TextColor" Value="Red" />
+							</DataTrigger>
+						</Label.Triggers>
+					</Label>
+					<Label Text="Tue" StyleClass="days_label" >
+						<Label.GestureRecognizers>
+							<TapGestureRecognizer Tapped="label_toggled"/>
+						</Label.GestureRecognizers>
+						<Label.Triggers>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Tue}"
+                     Value="false">
+								<Setter Property="TextColor" Value="Default" />
+							</DataTrigger>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Tue}"
+                     Value="true">
+								<Setter Property="TextColor" Value="Red" />
+							</DataTrigger>
+						</Label.Triggers>
+					</Label>
+					<Label Text="Wed" StyleClass="days_label" >
+						<Label.GestureRecognizers>
+							<TapGestureRecognizer Tapped="label_toggled"/>
+						</Label.GestureRecognizers>
+						<Label.Triggers>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Wed}"
+                     Value="false">
+								<Setter Property="TextColor" Value="Default" />
+							</DataTrigger>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Wed}"
+                     Value="true">
+								<Setter Property="TextColor" Value="Red" />
+							</DataTrigger>
+						</Label.Triggers>
+					</Label>
+
+					<Label Text="Thu" StyleClass="days_label" >
+						<Label.GestureRecognizers>
+							<TapGestureRecognizer Tapped="label_toggled"/>
+						</Label.GestureRecognizers>
+						<Label.Triggers>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Thu}"
+                     Value="false">
+								<Setter Property="TextColor" Value="Default" />
+							</DataTrigger>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Thu}"
+                     Value="true">
+								<Setter Property="TextColor" Value="Red" />
+							</DataTrigger>
+						</Label.Triggers>
+					</Label>
+					<Label Text="Fri" StyleClass="days_label" >
+
+						<Label.GestureRecognizers>
+							<TapGestureRecognizer Tapped="label_toggled"/>
+						</Label.GestureRecognizers>
+						<Label.Triggers>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Fri}"
+                     Value="false">
+								<Setter Property="TextColor" Value="Default" />
+							</DataTrigger>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Fri}"
+                     Value="true">
+								<Setter Property="TextColor" Value="Red" />
+							</DataTrigger>
+						</Label.Triggers>
+					</Label>
+					<Label Text="Sat" StyleClass="days_label" >
+						<Label.GestureRecognizers>
+							<TapGestureRecognizer Tapped="label_toggled"/>
+						</Label.GestureRecognizers>
+						<Label.Triggers>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Sat}"
+                     Value="false">
+								<Setter Property="TextColor" Value="Default" />
+							</DataTrigger>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Sat}"
+                     Value="true">
+								<Setter Property="TextColor" Value="Red" />
+							</DataTrigger>
+						</Label.Triggers>
+					</Label>
+					<Label Text="Sun" StyleClass="days_label" >
+						<Label.GestureRecognizers>
+							<TapGestureRecognizer Tapped="label_toggled"/>
+						</Label.GestureRecognizers>
+						<Label.Triggers>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Sun}"
+                     Value="false">
+								<Setter Property="TextColor" Value="Default" />
+							</DataTrigger>
+							<DataTrigger TargetType="Label"
+                     Binding="{Binding Goals.Days.Sun}"
+                     Value="true">
+								<Setter Property="TextColor" Value="Red" />
+							</DataTrigger>
+						</Label.Triggers>
+					</Label>
+				</StackLayout>
+			</StackLayout>
 			<StackLayout VerticalOptions="End">
 				<Button Text="Save" Clicked="save"></Button>
 			</StackLayout>

@@ -8,29 +8,28 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 			<StackLayout>
-			<ListView x:Name="gols">
-				<ListView.ItemTemplate>
-					<DataTemplate>
-						<ViewCell>
-							<Grid>
-								<Grid.ColumnDefinitions>
-									<ColumnDefinition Width="*"/>
-									<ColumnDefinition Width="*"/>
-									<ColumnDefinition Width="*"/>
-								</Grid.ColumnDefinitions>
-								<Label Text="{Binding Name}" Grid.Column="0" XAlign="Center" YAlign="Center" FontSize="Large" WidthRequest="200"/>
-								<Button Text="Edit" Clicked="edit" Grid.Column="1" CommandParameter="{Binding .}"></Button>
-								<Button Text="Delete" Clicked="delete" Grid.Column="2" CommandParameter="{Binding .}"></Button>
-
-							</Grid>
-						</ViewCell>
-					</DataTemplate>
-				</ListView.ItemTemplate>
-			</ListView>
+				<ListView x:Name="gols">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell>
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="*"/>
+										<ColumnDefinition Width="*"/>
+										<ColumnDefinition Width="*"/>
+									</Grid.ColumnDefinitions>
+									<Label Text="{Binding Name}" Grid.Column="0" XAlign="Center" YAlign="Center" FontSize="Large" WidthRequest="200"/>
+									<Button Text="Edit" Clicked="edit" Grid.Column="1" CommandParameter="{Binding .}"></Button>
+									<Button Text="Delete" Clicked="delete" Grid.Column="2" CommandParameter="{Binding .}"></Button>
+								</Grid>
+							</ViewCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			</StackLayout>
 			<StackLayout VerticalOptions="End">
 				<Button Text="Add new" Clicked="new_goal"></Button>
 			</StackLayout>
 		</StackLayout>
-        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
